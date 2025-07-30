@@ -183,8 +183,15 @@ defmodule Commanded.Application do
         default_dispatch_opts: Keyword.get(opts, :default_dispatch_opts, [])
 
       def config do
+        runtime_config = Application.get_env(@otp_app, __MODULE__, [])
+
         {:ok, config} =
-          Commanded.Application.Supervisor.runtime_config(__MODULE__, @otp_app, @config, [])
+          Commanded.Application.Supervisor.runtime_config(
+            __MODULE__,
+            @otp_app,
+            @config,
+            runtime_config
+          )
 
         config
       end
@@ -201,7 +208,7 @@ defmodule Commanded.Application do
       def start_link(opts \\ []) do
         name = name(opts)
 
-        Commanded.Application.Supervisor.start_link(__MODULE__, @otp_app, @config, name, opts)
+        Commanded.Application.Supervisor.start_link(__MODULE__, @otp_app, config(), name, opts)
       end
 
       def stop(pid, timeout \\ 5000) do
