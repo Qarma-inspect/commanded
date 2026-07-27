@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.4.11
+
+### Bug fixes
+
+* Correction for Process Manager docs by @TylerPachal in https://github.com/commanded/commanded/pull/656
+* Fix flakey test by @TylerPachal in https://github.com/commanded/commanded/pull/662
+* Remove V1.0 Upgrade Guide by @TylerPachal in https://github.com/commanded/commanded/pull/657
+* Remove Supervision Guide by @TylerPachal in https://github.com/commanded/commanded/pull/658
+* Spelling and grammar errors by @TylerPachal in https://github.com/commanded/commanded/pull/660
+* Organize Event Store Guides by @TylerPachal in https://github.com/commanded/commanded/pull/659
+* Rename master to main by @TylerPachal in https://github.com/commanded/commanded/pull/661
+* Remove unused require Logger by @wimwian in https://github.com/commanded/commanded/pull/665
+* Non-existent file reference by @TylerPachal in https://github.com/commanded/commanded/pull/663
+* Docs: Link to InMemory module instead of Wiki by @TylerPachal in https://github.com/commanded/commanded/pull/664
+
 ## v1.4.10
 
 ### Enhancements
